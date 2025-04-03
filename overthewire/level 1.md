@@ -1,0 +1,2 @@
+in this lab. i logined with username "bandit1" and password from the previous level. the opened the file named "-". using the command `cat ./-` because files named with "-" are generally considered as argument in linux/bash terminal. and got password for next level. the password was 
+"263JGJPfgU6LtdEvgfWU1XP5yac29mFx"
