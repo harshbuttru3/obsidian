@@ -4,24 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "7d1cc27c13a8895c",
+        "id": "4ead1e15e451371c",
         "type": "tabs",
         "children": [
           {
-            "id": "943a9955435eba68",
+            "id": "88e622d11b9d14af",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "overthewire/bandit/level 10.md",
+                "file": "overthewire/bandit/level 12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "level 10"
+              "title": "level 12"
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Topics to learn(todo).md",
+                "file": "overthewire/bandit/level 0.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Topics to learn(todo)"
+              "title": "Backlinks for level 0"
             }
           },
           {
@@ -140,17 +141,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "myself.md"
+                "file": "overthewire/bandit/level 0.md",
+                "followCursor": true,
+                "showSearch": true,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of myself"
+              "title": "Outline of level 0"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 331.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -164,14 +169,23 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "943a9955435eba68",
+  "active": "88e622d11b9d14af",
   "lastOpenFiles": [
-    "overthewire/bandit/level 9.md",
+    "overthewire/bandit/level 13.md",
+    "overthewire/bandit/level 12.md",
+    "overthewire/bandit/level 11.md",
+    "overthewire/bandit/level 0.md",
+    "overthewire/linux/Ownership, users and group.md",
+    "overthewire/linux/Linux_Cybersecurity_Roadmap.md",
+    "overthewire/bandit/level 6.md",
+    "overthewire/bandit/level 5.md",
+    "overthewire/bandit/level 4.md",
+    "overthewire/bandit/level 3.md",
+    "Roadmap.md",
     "overthewire/bandit/level 10.md",
+    "overthewire/bandit/level 9.md",
     "overthewire/bandit/level 8.md",
     "overthewire/bandit/level 7.md",
-    "overthewire/bandit/level 6.md",
-    "overthewire/linux/Ownership, users and group.md",
     "Ink/Writing/2025.4.8 - 2.28am.writing",
     "Ink/Writing",
     "Ink",
@@ -179,13 +193,9 @@
     "Untitled 1.canvas",
     "Untitled.canvas",
     "overthewire/bandit/level 1.md",
-    "overthewire/bandit/level 0.md",
     "overthewire/level 6.md",
     "overthewire/linux",
     "overthewire/bandit/level 2.md",
-    "overthewire/bandit/level 3.md",
-    "overthewire/bandit/level 4.md",
-    "overthewire/bandit/level 5.md",
     "overthewire/bandit",
     "overthewire/level 5.md",
     "overthewire/level 4.md",
@@ -194,11 +204,6 @@
     "overthewire/level 1.md",
     "overthewire/level 0.md",
     "Topics to learn(todo).md",
-    "tools list.md",
-    "myself.md",
-    "cisco Ethical hacker/Module-1_Recon/Reconnaissance.md",
-    "cisco Ethical hacker/Module-1_Recon/recon_tools.md",
-    "cisco Ethical hacker/terminologies.md",
     "overthewire",
     "Untitled",
     "cisco Ethical hacker/Module-1_Recon",
