@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "overthewire/bandit/level 12.md",
+                "file": "overthewire/bandit/level 18.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "level 12"
+              "title": "level 18"
             }
           }
         ],
@@ -171,6 +171,11 @@
   },
   "active": "88e622d11b9d14af",
   "lastOpenFiles": [
+    "overthewire/bandit/level 17.md",
+    "overthewire/bandit/level 18.md",
+    "overthewire/bandit/level 16.md",
+    "overthewire/bandit/level 15.md",
+    "overthewire/bandit/level 14.md",
     "overthewire/bandit/level 13.md",
     "overthewire/bandit/level 12.md",
     "overthewire/bandit/level 11.md",
@@ -199,11 +204,6 @@
     "overthewire/bandit",
     "overthewire/level 5.md",
     "overthewire/level 4.md",
-    "overthewire/level 3.md",
-    "overthewire/level 2.md",
-    "overthewire/level 1.md",
-    "overthewire/level 0.md",
-    "Topics to learn(todo).md",
     "overthewire",
     "Untitled",
     "cisco Ethical hacker/Module-1_Recon",
