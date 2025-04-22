@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "overthewire/bandit/level 18.md",
+                "file": "overthewire/linux/Linux_Cybersecurity_Roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "level 18"
+              "title": "Linux_Cybersecurity_Roadmap"
             }
           }
         ],
@@ -171,8 +171,17 @@
   },
   "active": "88e622d11b9d14af",
   "lastOpenFiles": [
-    "overthewire/bandit/level 17.md",
+    "overthewire/linux/Ownership, users and group.md",
+    "overthewire/linux/Linux_Cybersecurity_Roadmap.md",
+    "overthewire/bandit/level 24.md",
+    "overthewire/bandit/level 25.md",
+    "overthewire/bandit/level 23.md",
+    "overthewire/bandit/level 22.md",
+    "overthewire/bandit/level 21.md",
+    "overthewire/bandit/level 20.md",
+    "overthewire/bandit/level 19.md",
     "overthewire/bandit/level 18.md",
+    "overthewire/bandit/level 17.md",
     "overthewire/bandit/level 16.md",
     "overthewire/bandit/level 15.md",
     "overthewire/bandit/level 14.md",
@@ -180,8 +189,6 @@
     "overthewire/bandit/level 12.md",
     "overthewire/bandit/level 11.md",
     "overthewire/bandit/level 0.md",
-    "overthewire/linux/Ownership, users and group.md",
-    "overthewire/linux/Linux_Cybersecurity_Roadmap.md",
     "overthewire/bandit/level 6.md",
     "overthewire/bandit/level 5.md",
     "overthewire/bandit/level 4.md",
@@ -190,20 +197,13 @@
     "overthewire/bandit/level 10.md",
     "overthewire/bandit/level 9.md",
     "overthewire/bandit/level 8.md",
-    "overthewire/bandit/level 7.md",
     "Ink/Writing/2025.4.8 - 2.28am.writing",
     "Ink/Writing",
     "Ink",
-    "2025-04-08.md",
     "Untitled 1.canvas",
     "Untitled.canvas",
-    "overthewire/bandit/level 1.md",
-    "overthewire/level 6.md",
     "overthewire/linux",
-    "overthewire/bandit/level 2.md",
     "overthewire/bandit",
-    "overthewire/level 5.md",
-    "overthewire/level 4.md",
     "overthewire",
     "Untitled",
     "cisco Ethical hacker/Module-1_Recon",
