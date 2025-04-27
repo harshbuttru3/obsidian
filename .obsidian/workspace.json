@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4ead1e15e451371c",
+        "id": "d8a346f298fc4799",
         "type": "tabs",
         "children": [
           {
-            "id": "88e622d11b9d14af",
+            "id": "70415cc610bce18c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "overthewire/linux/Linux_Cybersecurity_Roadmap.md",
+                "file": "3rd sem/OOPS/Introduction to c++.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux_Cybersecurity_Roadmap"
+              "title": "Introduction to c++"
             }
           }
         ],
@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "ad2923c7e2374028",
@@ -169,12 +170,30 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "88e622d11b9d14af",
+  "active": "70415cc610bce18c",
   "lastOpenFiles": [
-    "overthewire/linux/Ownership, users and group.md",
+    "Ink/Drawing/2025.4.28 - 2.12am.drawing",
+    "Ink/Drawing/2025.4.28 - 2.11am.drawing",
+    "Ink/Drawing",
+    "Ink/Writing/2025.4.28 - 2.11am.writing",
+    "Ink/Writing/2025.4.8 - 2.28am.writing",
+    "3rd sem/OOPS/Introduction to c++.md",
+    "3rd sem/OOPS",
+    "3rd sem",
+    "Roadmap.md",
     "overthewire/linux/Linux_Cybersecurity_Roadmap.md",
-    "overthewire/bandit/level 24.md",
+    "overthewire/linux/🧬 Git Internals.md",
+    "overthewire/bandit/level 32.md",
+    "overthewire/bandit/level 31.md",
+    "overthewire/bandit/level 30.md",
+    "overthewire/linux/TODO.md",
+    "overthewire/linux/Ownership, users and group.md",
+    "overthewire/bandit/level 29.md",
+    "overthewire/bandit/level 27.md",
+    "overthewire/bandit/level 28.md",
+    "overthewire/bandit/level 26.md",
     "overthewire/bandit/level 25.md",
+    "overthewire/bandit/level 24.md",
     "overthewire/bandit/level 23.md",
     "overthewire/bandit/level 22.md",
     "overthewire/bandit/level 21.md",
@@ -185,29 +204,11 @@
     "overthewire/bandit/level 16.md",
     "overthewire/bandit/level 15.md",
     "overthewire/bandit/level 14.md",
-    "overthewire/bandit/level 13.md",
-    "overthewire/bandit/level 12.md",
-    "overthewire/bandit/level 11.md",
-    "overthewire/bandit/level 0.md",
-    "overthewire/bandit/level 6.md",
-    "overthewire/bandit/level 5.md",
-    "overthewire/bandit/level 4.md",
-    "overthewire/bandit/level 3.md",
-    "Roadmap.md",
-    "overthewire/bandit/level 10.md",
-    "overthewire/bandit/level 9.md",
-    "overthewire/bandit/level 8.md",
-    "Ink/Writing/2025.4.8 - 2.28am.writing",
     "Ink/Writing",
     "Ink",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "overthewire/linux",
-    "overthewire/bandit",
-    "overthewire",
-    "Untitled",
-    "cisco Ethical hacker/Module-1_Recon",
-    "THM rooms",
-    "cisco notes"
+    "overthewire/bandit"
   ]
 }
