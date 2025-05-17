@@ -263,7 +263,6 @@ return 0;
 
 ### Polymorphism : 
 Polymorphism means **"Many forms"** , It allows object of different classes to be treated as objects of a common parent class. There are Two types: 
-
 #### 1. Compile-Time Polymorphism (Static):
 Resolved during compilation. Includes:
 - ***Function Overloading***
