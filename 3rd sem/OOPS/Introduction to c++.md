@@ -1,418 +1,267 @@
-# For Mid Semester Examination : 
-## Q1). Benefit of OOP over Procedural Programming :
-1.  **Modularity :**  Code is divided into objects(classes), making it easier to manage. 
-2. **Reusability :** Code can be reused using inheritance - no need to rewrite common functionalities. 
-3. **Encapsulation :** Data and functions are bundled together, reducing complexity and increasing security.
-4. **Abstraction :** Hides internal implementation and shows only essential features. 
-5. **Inheritance :** Promotes code reuse by allowing  class to inherit properties and methods from another. 
-6. **Polymorphism :** Allows The same function to behave differently based on the object(method overloading/overriding). 
-7. **Maintainability :** Easier to update and debug due to modular structure.
-8. **Security :** Access modifiers (private, protected, public) control data access.
+- C++ was developed by **Bjarne Stroustrup** at  Bell labs (1980s).
+- It is an extension of **C** with **Object-Oriented programming (OOP)** features.
+- It's multi-paradigm (procedural + object-oriented).
+
+#### Why C++?
+- Powerful performance like C.
+- Supports large, modular programs using OOP.
 
 
-Here’s a quick **comparison table** between **OOP** and **Procedural Programming**:
-
-|Feature|Object-Oriented Programming (OOP)|Procedural Programming|
-|---|---|---|
-|**Structure**|Based on objects and classes|Based on functions and procedures|
-|**Modularity**|High – uses encapsulated objects|Low – functions are loosely structured|
-|**Code Reusability**|Supports inheritance and polymorphism|Limited reusability, requires code duplication|
-|**Encapsulation**|Yes – binds data and methods together|No – data and logic are separate|
-|**Abstraction**|Supported using classes and interfaces|Limited or manual abstraction|
-|**Security**|Better – access modifiers restrict access|Poor – global data can be accessed easily|
-|**Maintainability**|Easier – modular and organized|Harder – tightly coupled code|
-|**Real-world Modeling**|Strong – maps real-world entities easily|Weak – less intuitive mapping|
-|**Flexibility**|High – supports method overriding/overloading|Low – rigid function behavior|
 
 
-## Q2). Difference between class and objects with syntax : 
 
-### Class : 
-- It is bluepring/template for creating objects
-- Defines properties (attributes) and methods (functions). 
-```cpp
-class Car {
-public:
-	string brand;
-	void start() {
-		cout << "Car started";
-	}
-}
-```
+##  **Advantages of OOP**
 
-### Object : 
-- It is a real-world instance of a class.
-- Uses class blueprint to access data and behavior.
-```cpp
-Car myCar;
-myCar.brand = "BMW";
-myCar.start();
-```
-### 🧠 **Key Points to Remember:**
+- **Reusability**: Use existing code.
+    
+- **Scalability**: Easy to extend.
+    
+- **Security**: Data hiding.
+    
+- **Modularity**: Programs are divided into objects.
+    
 
-| Basis       | Class                          | Object                       |
-| ----------- | ------------------------------ | ---------------------------- |
-| Definition  | Blueprint/template             | Instance of a class          |
-| Memory      | No memory allocated            | Memory allocated on creation |
-| Declaration | `class ClassName { ... };`     | `ClassName objName;`         |
-| Usage       | Defines behavior and structure | Performs actions using class |
-| Example     | `class Car { ... };`           | `Car myCar;`                 |
+✅ _Exam Tip_: _"OOP increases reusability, scalability, security, and modularity."_
 
-## Q3). Differentiate between constructor and Destructor : 
+##  **Object-Oriented Technology**
 
-### Constructor : 
-- It is a special method **Automatically called** when a object is created.
-- It is used to initialize objects.
-- we can define the class properties by creating constructor funciton. and it is created by naming the function same name as of class.
-```cpp
-class MyClass {
-public:
-	MyClass() {
-		cout << "Constructor called";
-	}
-};
-```
+- Focuses on **objects** rather than procedures.
+    
+- Objects are **real-world entities** (Car, Student, etc.) with **data + methods**.
+    
+- **OOP** Concepts:
+    
+    - **Class**: Blueprint of objects.
+        
+    - **Object**: Instance of a class.
+        
+    - **Inheritance**: Child class inherits from parent class.
+        
+    - **Polymorphism**: Same name, different behavior.
+        
+    - **Encapsulation**: Binding data + methods.
+        
+    - **Abstraction**: Hiding internal details.
 
-### Destructor : 
--  A special method **automatically called** when an object is destroyed.
-- Used to release resources (memory, files, etc.). 
+### Encapsulation : 
+- It refers to **bundling of data (attributes) and methods (functions) that operates on the data into a single unit (class)**. 
+- It also involves **restricting direct access to some of an object's components**, which helps prevent unintended interference and misuse.
+
+***Key Aspects of Encapsulation :***
+1.  **Data Hiding** - Making fields (variables) private and providing access via public methods (getters and setters) . 
+2.  **Controlled Access :** prevents external code from directly modifying internal data, ensuring validation and security.
+3. **Modularity :** Keeps related data and behavior together, improving code Organisation and reusability.
 
 ```cpp
-class MyClass {
-public:
-	~MyClass() {
-		cout << "Destructor called";
-	}
-}
-```
-
-### 🧠 **Key Points to Remember:**
-
-|Feature|Constructor|Destructor|
-|---|---|---|
-|Purpose|Initializes an object|Cleans up before object is destroyed|
-|Name|Same as class name|Same as class name with `~` prefix|
-|Parameters|Can have parameters (overloaded)|Cannot have parameters|
-|Return type|No return type|No return type|
-|Overloading|Can be overloaded|Cannot be overloaded|
-|Call Timing|Called when object is created|Called when object goes out of scope|
-|Use Case|Initialize values, open files, etc.|Close files, free memory, etc.|
-
-
-## Q4). Program to find the area and perimeter of circle using constructor : 
-```cpp
-##include <iostream>
-#define PI 3.14159
+#include <iostream>
+#include <string>
 using namespace std;
 
-class Circle {
-private:
-	float radius;
+class BankAccount {
+private:  // Hidden access
+	string owner;
+	double balance;
+public: //controlled access
+	BankAccount(string owner, double balance): owner(owner),balance(balance) {}
+
+	void deposit(double amount){
+		if (amount > 0) balance += amount;
+}
+	void withdraw(double amount){
+		if (amoutn > 0 && amount <= balance) balance -= amount;
+}
+	double getBalance(){return balance;}
+		string getOwner(){return owner;}
+};
+
+int main(){
+	BankAccount acc("Alice", 1000);
+	acc.deposit(500);
+	acc.withdraw(200);
+	cout << "Balance: $" << acc.getBalance() << endl;
+	return 0;
+}
+```
+
+### Inheritance : 
+It is a fundamental OOP concept that allows a **new class (derived/child class)** to **inherit properties and behaviors (methods and fields)** from an **existing class (base/parent class)**.
+
+***Key Points:*** 
+1. **Reusability :** Avoid rewriting the same code by inheriting from a base class.
+2. **Extensibility** : Child classes can add new features or modify inherited ones.
+3. **Hierarchical Relationship :** Represents an "is-a" relationship (eg, `Car` is a `vehicle`)
+
+#### Types of Inheritance in c++
+
+
+| Type                     | Description                                         |
+| ------------------------ | --------------------------------------------------- |
+| Single Inheritance       | A class inherits from **One** base class            |
+| Multiple Inheritance     | A class inherits from **Multiple** base class       |
+| Multilevel Inheritance   | A derived class acts as a base for another class.   |
+| Hierarchical Inheritance | Multiple class inherit from **one** base class      |
+| Hybrid Inheritance       | Combination of multiple and multilevel inheritance. |
+***Example of Single Inheritance***
+```cpp
+#include <iostream>
+using namespace std;
+
+// Base class (Parent)
+class Vehicle {
 public:
-	// Constructor to initailize radius
-	Circle(float r){
-	radius = r
-	}
-	//Function to calculate area
-	float getArea(){
-		return PI * radius * radius;
-	}
-	//Function to calculate perimeter(circumference)
-	float getPerimiter () {
-		return 2 * PI * radius;
-	}
+    string brand = "Toyota";
+    void honk() {
+        cout << "Beep! Beep!" << endl;
+    }
+};
+
+// Derived class (Child)
+class Car : public Vehicle {  // 'public' inheritance
+public:
+    string model = "Corolla";
 };
 
 int main() {
-float r;
-cout << "Enter the radius of circle";
-cin << r;
-//creating object and passing radius to constructor
-Circle c(r);
+    Car myCar;
+    cout << "Brand: " << myCar.brand << endl;  // Inherited from Vehicle
+    cout << "Model: " << myCar.model << endl;  // Own property
+    myCar.honk();  // Inherited method
+    return 0;
+}
+```
 
-cout << "Area of Circle = " << c.getArea() << endl;
-cout << "Perimiter of Circle = " << c.getPerimeter() << endl;
+
+***Example of multiple inheritance***
+```cpp
+#include <iostream>
+using namespace std;
+
+//base class 1
+class Engine {
+public : 
+	void start() { cout << "Engine started!" << endl;}
+};
+//base class 2
+class MusicSystem {
+public:
+	void play() { cout << "Music playing" << endl;}
+};
+
+//Derived class (inherits from both)
+class Car : public Engine, public MusicSystem {};
+
+int main() {
+	Car mycar;
+	mycar.start(); // From Engine
+	mycar.play();  // from MusicSystem
+	return 0;
+}
+```
+
+***Multilevel Inheritance***
+```cpp
+#include <iostream>
+using namespace std;
+
+//base class
+class Animal {
+public:
+	void eat() {cout << "Eating..." << endl;}
+};
+//derived class
+class Mammal : public Animal {
+public:
+	void breate(){ cout << "Breathing..." << endl;}
+};
+
+// Derived from Mammal
+class Dog : public Mammal {
+public:
+	void bark() { cout << "Barking..." << endl;}
+};
+```
+
+***Hierarchical Inheritance***
+```cpp
+#include <iostream>
+using namespace std;
+
+//Base class
+class Vehicle {
+public:
+	void start() { cout << "Vehicle started!" << endl;}
+};
+
+//Derived class 1
+class Car : public Vehicle {
+public:
+	void drive() { cout << "car is moving." << endl;}
+};
+
+//Derived class 2
+class Bike : public Vehicle {
+public: 
+	void ride() { cout << "bike is running." << endl;}
+	};
+```
+
+***Hybrid Inheritance***
+```cpp
+#include <iostream>
+using namespace std;
+
+//base class
+class Person {
+public:
+	string name;
+	Person(string n) : name(n){}
+	void display() {cout << "Name: " << name << endl;}
+};
+
+//Derived 1
+class Student : public Person {
+public:
+	int rollNo;
+	Student(string n, int r) : Person(n), rollNo(r) {}
+};
+
+//Derived 2
+class Employee : public Person {
+public:
+	int empId;
+	Employee(string n, int id) : Person(n), empId(id) {}
+};
+
+// Derived from both student and Employee
+class TeachingAsistant : public Student, public Employee {
+public:
+	TeachingAssistant(string n, int r, int id) : Student(n,r), Employee(n, id) {}
+};
+
+int main() {
+TeachingAssistant ta("Alice", 101, 1001);
+
+	//ta.diaplay(); ❌Error (ambiguous, which display() to call?)
+
+	//Solution : Use scope resolution
+	ta.Student::display(); //calls Person's display() via Student
+	cout << "Roll NO: " << ta.rollNo << endl;
+	coutn << "Employee ID: " << ta.empId << endl;
 return 0;
 }
 ```
 ```handdrawn-ink
 {
 	"versionAtEmbed": "0.3.4",
-	"filepath": "Ink/Drawing/2025.5.17 - 0.15am.drawing",
-	"width": 350,
-	"aspectRatio": 1.5277588323557496
-}
-```
-## Q5). What is reference variable ? ***VVI*** 
- A reference variable is an alias (another name) for an existing variable.
-### Key Points : 
-1. Shares the same memory location as the original variable.
-2. declared using **&** symbol.
-3. Any change to the reference affects the original variable.
-4. Must be initialized at the time of declaration.
-```cpp
-#include <iostream>
-using namespace std;
-int main(){
-int a = 10;
-int &ref = a; //ref is reference to a
-
-cout << "x = " << x << endl;
-cout << "ref = " << ref << endl;
-
-ref = 20;
-cout << "x = " << x << endl;
-cout << "ref = " << ref << endl;
-
-return 0;
-```
-
-### Advantages : 
-- Function arguments (Pass by reference)
-- Avoid data copying (faster)
-- To return multiple values from a function
-
-## Q6). Differentiate between Method overloading and overriding. 
-
-| Feature              | Method Overloading                     | Method Overriding                           |
-| -------------------- | -------------------------------------- | ------------------------------------------- |
-| Definition           | Same method name, different parameters | Same method name and parameters             |
-| Class Scope          | Within same class                      | Across base and derived class               |
-| Inheritance Required | ❌ Not required                         | ✅ Required                                  |
-| Polymorphism Type    | Compile-time                           | Run-time                                    |
-| Parameters           | Must be different                      | Must be same                                |
-| Return Type          | Can be same or different               | Usually same (required in strict languages) |
-## Q). Short Note on 
-#### 1. Friend Function : 
-A friend function is a special function that is **not a member** of a class but still has access to its private and protected members.
-
-- Declared using the keyword `friend`  inside the class.
-- Defined outside the class like a normal function
-- Not called with an object; it takes objects as parameters.
-- Used when external functions need access to class internals.
-```cpp
-class Box {
-private:
-	int length;
-public: 
-	Box() { length = 10;}
-	friend void showLength(Box b);  //Friend function declaration
-};
-
-void showLength(Box b) {    // Friend function definition
-	 cout << "Length: " << b.length << endl;
+	"filepath": "Ink/Drawing/2025.4.28 - 2.12am.drawing",
+	"width": 974,
+	"aspectRatio": 1.7904411764705883
 }
 ```
 
-#### 2. Virtual Function : 
-It is a member function in a base class that you can override in a derived class using `virtual` keyword. 
-- Declared using `virtual`  in the base class.
-- Enables **runtime polymorphism**.
-- Ensures the **derived class's version** is called via base class Pointer.
-- Must be **overridden** in derived class for custom behavior. 
-```cpp
-class Base {
-public:
-    virtual void show() {
-        cout << "Base class show" << endl;
-    }
-};
 
-class Derived : public Base {
-public:
-    void show() override {
-        cout << "Derived class show" << endl;
-    }
-};
 
-int main() {
-    Base* ptr;
-    Derived d;
-    ptr = &d;
-    ptr->show();  // Calls Derived's show() due to virtual function
-}
-
-```
-
-#### 3. Inline Function : 
-It is a function where the code is expanded at the point of the function call, instead of making a traditional function call.
-- Declared using the `inline` keyword before the function.
-- Avoids overhead of function calls (especially for small functions).
-- Compiler replaces the function call with actual code.
-- useful for short and frequently called functions. 
-```cpp
-#include <iostream>
-using namespace std;
-
-inline int square(int x) {
-	return x * x;
-}
-
-int main() {
-	cout << "Square of 5: " << square(5); //output 25
-	return 0;
-}
-```
-
-#### 4. Abstraction : 
-It is the process of **hiding internal details** and showing **only the essentials features** of an object to the user. 
-- Focuses on **What an object does,** not **how it does** it. 
-- Reduces complexity and increases code clarity.
-```cpp
-class Shape{
-public: 
-	virtual void draw() = 0; //pure virtual function (abstract)
-};
-class Circle : public Shape{
-public: 
-	void draw() override {
-		cout << "Drawing Circle" << endl;
-	}
-};
-```
-##### 📌 **Real-Life Example:**
-- When driving a car, you use the steering and pedals (**what** to do), but you don’t need to know the engine's internal mechanism (**how** it works).
-## Q). What is function template? using function template, write a program to find largest of three variable. 
-A function template allows you to create a single function to work with different data types(int, float, char,etc) without rewriting code.
-
-- Defined using the template keyword.
-- Enables generic programming.
-- compiler generates the correct version of the function at compile time.
-```cpp
-template <class T>
-T functionName(T a, T a) {
-	// function body
-}
-```
-
-##### Program : Find the largest of Three variables using function template. 
-```cpp
-#include <iostream>
-using namespace std;
-
-//template function to find the largest of three
-template <class T>
-T largest(T a,T b,T c) {
-	if( a>= b && a >= c)
-		return a;
-	else if(b >= a && b >= c)
-		return b;
-	else 
-		return c;
-}
-int main(){
-	cout << "Largest (int): " << largest(10, 25, 15) << endl;
-	cout << "Largest (float): " << largest(5.6f, 7.2f, 6.1f) << endl;
-	cout << "Largest (char): " << largest('x','a', 'm') << endl;
-
-	return 0;
-}
-```
-
-## Q). Write a c++ program to find the sum of series 1+3+5+7+9..... upto n terms : 
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-	int n, sum=0;
-	cout << "Enter the number of terms: ";
-	cin >> n;
-
-	 for (int i=0; i<n; i++){
-		 int term = 2 * i + 1; //Generates odd numbers
-		 sum += term;
-	 }
-	cout << "Sum of the series = " << sum << endl;
-
-	return 0;
-}
-```
-
-Or, 
-we know that sum of odd numbers upto n terms is n^2
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() { 
-	int n;
-	cout << "Enter the numbers of terms: ";
-	cin >> n;
-	cout << "Sum of the series = " << n*n << endl;
-
-	return 0;
-}
-```
-
-## Q). Write a program to find a sub-string inside a string : 
-
-Using the built-in ***Find()*** function: 
-```cpp
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main() {
-	string mainStr, subStr;
-
-	cout << "Enter the main string: ";
-	getline(cin, mainStr); //Read the entire line including spaces
-
-	cout << "Enter the substring to search: ";
-	getline(cin, subStr);
-
-	size_t pos = mainStr.find(subStr);  // returns "string::npos" if not found.
-
-	if(pos != string::npos) {
-		cout << "Substring fount at position: " << pos << endl;
-	} else {
-		cout << "Substing not found! " << endl;
-	}
-	return 0;
-}
-```
-
-Manual Substring search: 
-```cpp
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main() {
-	string mainStr, subStr;
-	bool found = false;
-
-	cout << "Enter the main string: " ;
-	getline(cin, mainStr);
-
-	cout << "Enter the sub string: " ;
-	getline(cin, subStr);
-
-	int mainLen = mainStr.length();
-	int subLen = subStr.length();
-
-	for(int i=0;i<=mainLen - subLen; i++) {
-		int j;
-		for (j=0; j<subLen; j++){
-			if(mainSt[i+j] != subStr[j]) {
-				break;
-			}
-		}
-		if ( j== subLen) {
-			found = true;
-			cout << "Substring found at position: " << i << endl;
-			break;
-		}
-	}
-	if(!found){
-		cout << "Substring not found!" << endl;
-	}
-	return 0;
-}
-```
-
-## Q).  Polymorphism : 
+### Polymorphism : 
 Polymorphism means **"Many forms"** , It allows object of different classes to be treated as objects of a common parent class. There are Two types: 
 #### 1. Compile-Time Polymorphism (Static):
 Resolved during compilation. Includes:
@@ -462,38 +311,143 @@ int main() {
 	return 0;
 }
 ```
+
+#### 2. Runtime Polymorphism (Dynamic)
+resolved during runtime using:
+
+- ***Function overrinding (with `virtual` functions)
 ```cpp
 #include <iostream>
 using namespace std;
 
-class Complex {
+class Animal {
 public:
-	int real,imag;
-	Complex(int r=0,int i =0){
-		real = r;
-		imag = i;
+	virtual void sound() {  // 'virtual' enables overriding
+		cout << "Animal makes sound\n";
 	}
-	void print(){
-		cout << "Complex No: "<< real << "+ " << imag + "i" ;
+};
+
+class Dog : public Animal {
+public: 
+	void sound() override {
+		cout << "Dog barks: Woof!\n";
 	}
-	//Operator overloading 
-	Complex operator + (Complex c){
-		Complex temp;
-		temp.real = real+c.real;
-		temp.imag = imag+c.imag;
-		return temp;
+};
+
+class Cat : public Animal {
+public:
+	void sound() override {
+		cout << "Cat meows: Meow!\n";	
 	}
-	Complex operator * (Complex c){
-		Complex temp;
-		temp.real = real*c.real-imag*c.imag;
-		temp.imag = real*c.imag - imag*c.real;
-		return temp;
-	}
+};
+
+int main() {
+Animal* a1 = new Dog();
+Animal* a2 = new Cat();
+
+a1->sound();
+a2->sound();
+
+delete a1, a2;
+return 0
 }
-int main(){
-	Complex c1(4,6), c2(1,2);
-	Complex c3 = c1+c2;
-	c2.print();
+```
+
+***Key Points:***
+- `virtual` keyword allows runtime binding.
+- Without `virtual`, the base class method runs (early binding).
+- `override` (c++11) ensures correct overriding.
+##### **a)  `a1->sound()` vs `a1.sound()`**
+
+- **`->`** is used for **pointer access** (shortcut for `(*a1).sound()`).
+    
+- **`.`** is used for **direct object access**.
+##### **b) `new Dog()` - Dynamic Memory Allocation**
+
+- `new Dog()` creates a `Dog` object **on the heap** (not automatic cleanup).
+    
+- Returns a **pointer** to that object (`Animal*`).
+
+
+
+
+### Abstraction : 
+it focuses on **hiding complex implementation details** while exposing only the **essential features** to users.
+
+> "Show what an object does, not how it does it."
+
+1. ***Abstract Class***
+```cpp
+#include <iostream>
+using namespace std;
+
+//Abstract class (cannot be instantiated)
+class Shape {
+public:
+	//pure virtual function (makes shape abstract)
+	virtual float area() = 0;
+
+	void printArea() {
+	cout << "Area: " << area() << endl; // Uses abstract method
+	}
+};
+
+//Concrete class (implements the abstraction)
+class Circle : public Shape {
+	float radius;
+public:
+	Circle(float r) : radius(r) {}
+
+	//Must implement area() (otherwise circle becomes abstract too)
+	float area() override {
+		return 3.14 * radius * radius;
+	}
+};
+int main() {
+	//shape s; // ❌ Error - can't instantiate abstract class
+	Circle c(5);
+	c.printArea(); // Output: Area: 78.5
 	return 0;
 }
 ```
+
+2. ***Interface (Pure Abstract Class)***
+```cpp
+class Drawable {
+public:
+	virtual void draw() =0; //pure virtual function
+	virtual ~Drawable() {} //virtual destructor
+};
+
+class Circle : public Drawable {
+public: 
+	void draw() override {
+		cout << "Drawing a circle" << endl;
+	}
+};
+
+int main(){
+	Drawable* d = new circle();
+	d->draw();
+	delete d; 
+	return 0;
+}
+```
+
+#### **Why Use Abstraction?**
+
+1. **Simplifies Complex Systems**
+    
+    - Users interact with high-level interfaces without worrying about internal details.
+        
+2. **Reduces Complexity**
+    
+    - Changes to implementation don't affect code using the abstraction.
+        
+3. **Enforces Structure**
+    
+    - Derived classes must implement all abstract methods.
+        
+4. **Supports Polymorphism**
+    
+    - Enables runtime binding through base class pointers/references.
